@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+         <content-type
+         	base-type="org.eclipse.core.runtime.text"
+         	file-extensions="js,jsx,ts,tsx,py,ipynb"
+         	id="rosie.language.server"
+         	name="Rosie-supported file types"
+         	priority="high"
+         	default-charset="UTF-8">
+     	 </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+         <editorContentTypeBinding
+         	contentTypeId="rosie.language.server"
+         	editorId="org.eclipse.ui.genericeditor.GenericEditor">
+         </editorContentTypeBinding>
+   </extension>
+   <extension
+         point="org.eclipse.lsp4e.languageServer">
+      <server
+            class="io.codiga.rosiels.connection.RosieStreamConnectionProvider"
+            id="rosie.language.server"
+            label="Rosie Language Server">
+      </server>
+      <contentTypeMapping
+            contentType="rosie.language.server"
+            id="rosie.language.server">
+      </contentTypeMapping>
+   </extension>
+   <extension
+    point="org.eclipse.ui.preferencePages">
+    <page
+      class="io.codiga.rosiels.preferences.RosieLSPreferencesPage"
+      id="io.codiga.rosiels.preferences.rosielspreferencespage"
+      name="Rosie Language Server">
+    </page>
+  </extension>
+</plugin>
