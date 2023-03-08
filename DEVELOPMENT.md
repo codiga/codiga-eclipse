@@ -25,6 +25,10 @@ Eclipse launches the language server when a file with a Rosie-supported type is 
 If there is a change in the Rosie Language Server, its compiled sources must be updated in this plugin as well. To clone the server repository,
 install dependencies, and compile sources, you can simply execute `install-language-server.sh` in the `language-server` folder.
 
+## How to run the plugin?
+
+There is a **Run As** option called *Eclipse Application* that you can select via the context menu of the project root folder, and under Run As.
+
 ## Articles
 
 Here are some resources that might be useful for later:
