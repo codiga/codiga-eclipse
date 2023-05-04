@@ -1,3 +1,5 @@
+[Datadog acquired Codiga](https://www.codiga.io/blog/codiga-joins-datadog/). This repository is no longer active.
+
 # Eclipse IDE plugin for the Rosie Language Server
 
 Eclipse IDE plugin for integrating with Codiga's Rosie Language Server available at [Codiga/vscode-plugin](https://github.com/codiga/vscode-plugin/server).
